@@ -25,8 +25,8 @@ h1{font-size:clamp(42px,8vw,72px);line-height:1.05;letter-spacing:-3px;margin-bo
 .user{align-self:flex-end;background:#3155d8}.agent{align-self:flex-start;background:#191f2b;color:#dce2ee}.typing{display:none;color:#7f8ba1;font-size:13px}
 .scenarios{display:flex;gap:9px;flex-wrap:wrap;padding:0 22px 22px}.scenarios button,.cta{border:0;border-radius:10px;padding:11px 15px;background:#1b2331;color:#dce4f5;cursor:pointer;font-weight:600}
 .scenarios button:hover{background:#29344a}.cta-wrap{text-align:center;padding:65px 20px 70px}.cta{display:inline-block;text-decoration:none;background:#4d6fff;color:white;padding:14px 25px;border-radius:12px;box-shadow:0 10px 30px #4d6fff33}
-.testimonials{padding:5px 0 80px}.testimonial-note{text-align:center;color:#758198;font-size:13px;margin:-15px auto 28px}
-.testimonial-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.testimonials{padding:5px 0 80px}.testimonial-note{text-align:center;color:#929daf;font-size:16px;line-height:1.6;margin:-15px auto 32px;display:block;width:100%}
+.testimonial-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 
 /* WhatsApp-style testimonial cards */
 .wa-card{background:#efeae2;border:1px solid #138b86;border-radius:13px;overflow:hidden;box-shadow:0 8px 25px #0007;min-width:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
@@ -34,8 +34,8 @@ h1{font-size:clamp(42px,8vw,72px);line-height:1.05;letter-spacing:-3px;margin-bo
 .wa-back{font-size:24px;font-weight:300;line-height:1}.wa-avatar{width:33px;height:33px;min-width:33px;border-radius:50%;display:grid;place-items:center;background:#d7dfe2;font-size:18px;overflow:hidden}
 .wa-info{flex:1;min-width:0;line-height:1.15}.wa-name{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .wa-status{font-size:9px;color:#d0e7e3;margin-top:2px}.wa-icons{display:flex;gap:9px;font-size:14px;color:#e3f1ef;white-space:nowrap}
-.wa-chat{height:285px;padding:13px 9px;display:flex;flex-direction:column;gap:14px;background:#efeae2;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wa-bubble{position:relative;max-width:91%;padding:9px 9px 7px;font-size:12px;line-height:1.42;color:#111;box-shadow:0 1px 1px #0002;word-wrap:break-word}
+.wa-chat{height:330px;padding:14px 10px;display:flex;flex-direction:column;gap:14px;background:#efeae2;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wa-bubble{position:relative;max-width:94%;padding:10px 10px 8px;font-size:12px;line-height:1.45;color:#111;box-shadow:0 1px 1px #0002;word-wrap:break-word}
 .wa-in{align-self:flex-start;background:#fff;border-radius:0 8px 8px 8px}.wa-out{align-self:flex-end;background:#d9fdd3;border-radius:8px 0 8px 8px}
 .wa-bubble small{float:right;font-size:8px;line-height:11px;color:#86938d;margin:6px 0 0 9px;white-space:nowrap}.check{color:#1685d4;font-size:10px;font-weight:600}
 
@@ -44,8 +44,8 @@ h1{font-size:clamp(42px,8vw,72px);line-height:1.05;letter-spacing:-3px;margin-bo
 @keyframes slideIn{from{transform:translateY(25px);opacity:0}to{transform:translateY(0);opacity:1}}
 footer{text-align:center;padding:25px;color:#6f7b8f;border-top:1px solid #181e29;font-size:13px}
 @media(max-width:900px){.testimonial-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.grid-2,.capabilities{grid-template-columns:1fr}.hero{padding-top:65px}h1{letter-spacing:-2px}.section{padding-bottom:50px}.testimonial-grid{grid-template-columns:1fr 1fr;gap:7px}.wa-chat{height:275px}.wa-bubble{font-size:12px}}
-@media(max-width:480px){.testimonial-grid{grid-template-columns:1fr;gap:12px}.wa-chat{height:245px}.wa-bubble{font-size:13px}}
+@media(max-width:700px){.grid-2,.capabilities{grid-template-columns:1fr}.hero{padding-top:65px}h1{letter-spacing:-2px}.section{padding-bottom:50px}.testimonial-grid{grid-template-columns:1fr 1fr;gap:7px}.wa-chat{height:315px}.wa-bubble{font-size:12px}}
+@media(max-width:480px){.testimonial-grid{grid-template-columns:1fr;gap:12px}.wa-chat{height:290px}.wa-bubble{font-size:13px}}
 </style>
 </head>
 <body>
@@ -105,7 +105,7 @@ footer{text-align:center;padding:25px;color:#6f7b8f;border-top:1px solid #181e29
 
 <section class="testimonials container">
 <h2 class="section-title">Testimoni Klien</h2>
-<p style="color:#929daf;margin-bottom:25px;class="testimonial-note"">Ini kata beberapa Klien yang sudah merasakan manfaat otomatisasi dengan Kang DIGI.</p>
+<p class="testimonial-note">Ini kata beberapa Klien yang sudah merasakan manfaat otomatisasi dengan Kang DIGI.</p>
 <div class="testimonial-grid">
 
 <div class="wa-card"><div class="wa-header"><span class="wa-back">‹</span><div class="wa-avatar">👨🏻</div><div class="wa-info"><div class="wa-name">Andi - Toko Online</div><div class="wa-status">online</div></div><div class="wa-icons">◯ ⋮</div></div><div class="wa-chat">
@@ -121,13 +121,13 @@ footer{text-align:center;padding:25px;color:#6f7b8f;border-top:1px solid #181e29
 </div></div>
 
 <div class="wa-card"><div class="wa-header"><span class="wa-back">‹</span><div class="wa-avatar">👨🏻</div><div class="wa-info"><div class="wa-name">Budi - Properti</div><div class="wa-status">online</div></div><div class="wa-icons">◯ ⋮</div></div><div class="wa-chat">
-<div class="wa-bubble wa-in">Hasil analisis anomali kemarin sangat membantu. Ternyata ada ad set yang CPA-nya naik drastis. Setelah ikuti saran Kang DIGI, biaya iklan jadi lebih efisien.<small>11.03</small></div>
+<div class="wa-bubble wa-in">Hasil analisis anomali kemarin sangat membantu. Ternyata ada adset yang CPA-nya naik drastis. Setelah ikuti saran Kang DIGI, biaya iklan jadi lebih efisien.<small>11.03</small></div>
 <div class="wa-bubble wa-out">Wah bagus Pak Budi! Senang strateginya berhasil. Kita pantau terus ya. 🙏 <small>11.04 <span class="check">✓✓</span></small></div>
 <div class="wa-bubble wa-in">Siap. Tool ini wajib banget untuk tim marketing saya. Recommended! 👍<small>11.05</small></div>
 </div></div>
 
 <div class="wa-card"><div class="wa-header"><span class="wa-back">‹</span><div class="wa-avatar">👩🏻</div><div class="wa-info"><div class="wa-name">Sari - Fashion Brand</div><div class="wa-status">online</div></div><div class="wa-icons">◯ ⋮</div></div><div class="wa-chat">
-<div class="wa-bubble wa-in">Laporan harian dari Kang DIGI sangat mudah dipahami. Visualnya jelas, insight-nya relevan, dan rekomendasi action-nya langsung bisa diterapkan.<small>16.10</small></div>
+<div class="wa-bubble wa-in">Laporan harian dari Kang DIGI sangat mudah dipahami. Visualnya jelas, insight-nya relevan, dan rekomendasi action-nya langsung bisa diterapkan.✨ <small>16.10</small></div>
 <div class="wa-bubble wa-out">Terima kasih Kak Sari 🙏. Jika ada campaign baru yang mau dianalisis, kabari saya ya.<small>16.11 <span class="check">✓✓</span></small></div>
 <div class="wa-bubble wa-in">Pasti. Sejauh ini puas banget dengan hasilnya. Hemat waktu dan tim jadi lebih fokus ke strategi lainnya. 👍<small>16.13</small></div>
 </div></div>
