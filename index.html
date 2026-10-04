@@ -6,48 +6,447 @@
 <title>Kang DIGI — AI Ads Performance Assistant</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#080b12;color:#f5f7fb;line-height:1.6}
-.container{width:min(1080px,92%);margin:auto}.hero{text-align:center;padding:90px 20px 70px}
-.badge{display:inline-block;padding:7px 14px;border:1px solid #24452f;border-radius:30px;background:#0d1912;color:#6ee787;font-size:13px;margin-bottom:22px}
-.avatar{width:82px;height:82px;margin:0 auto 22px;border-radius:24px;display:grid;place-items:center;background:linear-gradient(135deg,#202b45,#111827);border:1px solid #34405c;font-size:40px;box-shadow:0 0 40px #3153ff22}
-h1{font-size:clamp(42px,8vw,72px);line-height:1.05;letter-spacing:-3px;margin-bottom:18px}
-.gradient{background:linear-gradient(90deg,#fff,#7c9cff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.tagline{max-width:680px;margin:auto;color:#aeb7c8;font-size:18px}
-.section{padding:35px 0 75px}.section-title{text-align:center;font-size:30px;margin-bottom:30px;letter-spacing:-1px}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:#10141d;border:1px solid #202735;border-radius:20px;padding:28px}
-.card h3{font-size:20px;margin-bottom:16px}.card ul{list-style:none;color:#aeb7c8}.card li{padding:9px 0;border-bottom:1px solid #1d2330}.card li:last-child{border:0}
-.chaos{border-color:#39252b}.chaos h3{color:#ff8585}.solution{border-color:#243a32}.solution h3{color:#6ee7a0}
-.capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.capability{background:#0d1119;border:1px solid #202735;border-radius:18px;padding:25px}
-.icon{font-size:28px;margin-bottom:15px}.capability h3{margin-bottom:8px}.capability p{color:#9da7b9;font-size:14px}
-.sim{max-width:720px;margin:auto;background:#0d1119;border:1px solid #252d3c;border-radius:22px;overflow:hidden}
-.chat-head{padding:18px 22px;border-bottom:1px solid #222936;display:flex;align-items:center;gap:12px}.dot{width:9px;height:9px;background:#6ee787;border-radius:50%;box-shadow:0 0 10px #6ee787}
-.chat-body{padding:22px;min-height:250px;display:flex;flex-direction:column;gap:14px}.msg{max-width:82%;padding:12px 16px;border-radius:15px;font-size:14px}
-.user{align-self:flex-end;background:#3155d8}.agent{align-self:flex-start;background:#191f2b;color:#dce2ee}.typing{display:none;color:#7f8ba1;font-size:13px}
-.scenarios{display:flex;gap:9px;flex-wrap:wrap;padding:0 22px 22px}.scenarios button,.cta{border:0;border-radius:10px;padding:11px 15px;background:#1b2331;color:#dce4f5;cursor:pointer;font-weight:600}
-.scenarios button:hover{background:#29344a}.cta-wrap{text-align:center;padding:65px 20px 70px}.cta{display:inline-block;text-decoration:none;background:#4d6fff;color:white;padding:14px 25px;border-radius:12px;box-shadow:0 10px 30px #4d6fff33}
-.testimonials{padding:5px 0 80px}.testimonial-note{text-align:center;color:#929daf;font-size:16px;line-height:1.6;margin:-15px auto 32px;display:block;width:100%}
-.testimonial-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+
+body{
+font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+background:#07111f;
+color:#f4f8fb;
+line-height:1.6
+}
+
+.container{width:min(1080px,92%);margin:auto}
+
+.hero{text-align:center;padding:90px 20px 70px}
+
+.badge{
+display:inline-block;
+padding:7px 14px;
+border:1px solid #245e68;
+border-radius:30px;
+background:#0c242c;
+color:#61ddd1;
+font-size:13px;
+margin-bottom:22px
+}
+
+.avatar{
+width:82px;
+height:82px;
+margin:0 auto 22px;
+border-radius:24px;
+display:grid;
+place-items:center;
+background:linear-gradient(135deg,#123b45,#14253d);
+border:1px solid #28576a;
+font-size:40px;
+box-shadow:0 0 40px #1bb7aa22
+}
+
+h1{
+font-size:clamp(42px,8vw,72px);
+line-height:1.05;
+letter-spacing:-3px;
+margin-bottom:18px
+}
+
+.gradient{
+background:linear-gradient(90deg,#5ee5d7,#54a9ff);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent
+}
+
+.tagline{
+max-width:680px;
+margin:auto;
+color:#a6b7c9;
+font-size:18px
+}
+
+.section{padding:35px 0 75px}
+
+.section-title{
+text-align:center;
+font-size:30px;
+margin-bottom:30px;
+letter-spacing:-1px;
+color:#f2f7fa
+}
+
+.grid-2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px
+}
+
+.card{
+background:#0d1827;
+border:1px solid #1b2c3e;
+border-radius:20px;
+padding:28px;
+box-shadow:0 8px 25px #00000026
+}
+
+.card h3{
+font-size:20px;
+margin-bottom:16px
+}
+
+.card ul{
+list-style:none;
+color:#a7b8c8
+}
+
+.card li{
+padding:9px 0;
+border-bottom:1px solid #172637
+}
+
+.card li:last-child{border:0}
+
+.chaos{border-color:#46343b}
+.chaos h3{color:#e47c83}
+
+.solution{border-color:#20565e}
+.solution h3{color:#61ddd1}
+
+.capabilities{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px
+}
+
+.capability{
+background:#0d1827;
+border:1px solid #1b2c3e;
+border-radius:18px;
+padding:25px;
+box-shadow:0 8px 25px #00000026
+}
+
+.icon{
+font-size:28px;
+margin-bottom:15px
+}
+
+.capability h3{
+margin-bottom:8px;
+color:#eaf4f8
+}
+
+.capability p{
+color:#91a6b8;
+font-size:14px
+}
+
+.sim{
+max-width:720px;
+margin:auto;
+background:#0b1725;
+border:1px solid #244052;
+border-radius:22px;
+overflow:hidden;
+box-shadow:0 12px 35px #00000035
+}
+
+.chat-head{
+padding:18px 22px;
+border-bottom:1px solid #1b2d3e;
+display:flex;
+align-items:center;
+gap:12px
+}
+
+.dot{
+width:9px;
+height:9px;
+background:#49d6c7;
+border-radius:50%;
+box-shadow:0 0 10px #49d6c7
+}
+
+.chat-body{
+padding:22px;
+min-height:250px;
+display:flex;
+flex-direction:column;
+gap:14px
+}
+
+.msg{
+max-width:82%;
+padding:12px 16px;
+border-radius:15px;
+font-size:14px
+}
+
+.user{
+align-self:flex-end;
+background:#087f78;
+color:white
+}
+
+.agent{
+align-self:flex-start;
+background:#142536;
+color:#d8e6ee
+}
+
+.typing{
+display:none;
+color:#71899d;
+font-size:13px
+}
+
+.scenarios{
+display:flex;
+gap:9px;
+flex-wrap:wrap;
+padding:0 22px 22px
+}
+
+.scenarios button,.cta{
+border:0;
+border-radius:10px;
+padding:11px 15px;
+background:#12303a;
+color:#69dcd2;
+cursor:pointer;
+font-weight:600
+}
+
+.scenarios button:hover{
+background:#17404a
+}
+
+.cta-wrap{
+text-align:center;
+padding:65px 20px 70px
+}
+
+.cta{
+display:inline-block;
+text-decoration:none;
+background:linear-gradient(135deg,#079c91,#167fc2);
+color:white;
+padding:14px 25px;
+border-radius:12px;
+box-shadow:0 10px 30px #078f8738
+}
+
+.testimonials{
+padding:5px 0 80px
+}
+
+.testimonial-note{
+text-align:center;
+color:#8498aa;
+font-size:16px;
+line-height:1.6;
+margin:-15px auto 32px;
+display:block;
+width:100%
+}
+
+.testimonial-grid{
+display:grid;
+grid-template-columns:repeat(4,minmax(0,1fr));
+gap:10px
+}
 
 /* WhatsApp-style testimonial cards */
-.wa-card{background:#efeae2;border:1px solid #138b86;border-radius:13px;overflow:hidden;box-shadow:0 8px 25px #0007;min-width:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wa-header{height:50px;background:#075e54;display:flex;align-items:center;padding:6px 8px;gap:7px;color:#fff}
-.wa-back{font-size:24px;font-weight:300;line-height:1}.wa-avatar{width:33px;height:33px;min-width:33px;border-radius:50%;display:grid;place-items:center;background:#d7dfe2;font-size:18px;overflow:hidden}
-.wa-info{flex:1;min-width:0;line-height:1.15}.wa-name{font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.wa-status{font-size:9px;color:#d0e7e3;margin-top:2px}.wa-icons{display:flex;gap:9px;font-size:14px;color:#e3f1ef;white-space:nowrap}
-.wa-chat{height:330px;padding:14px 10px;display:flex;flex-direction:column;gap:14px;background:#efeae2;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
-.wa-bubble{position:relative;max-width:94%;padding:10px 10px 8px;font-size:12px;line-height:1.45;color:#111;box-shadow:0 1px 1px #0002;word-wrap:break-word}
-.wa-in{align-self:flex-start;background:#fff;border-radius:0 8px 8px 8px}.wa-out{align-self:flex-end;background:#d9fdd3;border-radius:8px 0 8px 8px}
-.wa-bubble small{float:right;font-size:8px;line-height:11px;color:#86938d;margin:6px 0 0 9px;white-space:nowrap}.check{color:#1685d4;font-size:10px;font-weight:600}
+.wa-card{
+background:#efeae2;
+border:1px solid #138b86;
+border-radius:13px;
+overflow:hidden;
+box-shadow:0 8px 25px #00000035;
+min-width:0;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif
+}
 
-.activity{position:fixed;left:20px;bottom:20px;z-index:99;width:min(330px,calc(100% - 40px));background:#101722;border:1px solid #33445e;border-radius:13px;padding:12px 15px;box-shadow:0 12px 35px #0009;display:none;animation:slideIn .45s ease}
-.activity strong{font-size:12px;color:#fff}.activity p{font-size:12px;color:#b4bfd0;line-height:1.4;margin-top:2px}.activity small{display:block;color:#6ee787;font-size:9px;margin-top:4px}.activity .close{position:absolute;right:10px;top:6px;color:#69778d;cursor:pointer}
-@keyframes slideIn{from{transform:translateY(25px);opacity:0}to{transform:translateY(0);opacity:1}}
-footer{text-align:center;padding:25px;color:#6f7b8f;border-top:1px solid #181e29;font-size:13px}
-@media(max-width:900px){.testimonial-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.grid-2,.capabilities{grid-template-columns:1fr}.hero{padding-top:65px}h1{letter-spacing:-2px}.section{padding-bottom:50px}.testimonial-grid{grid-template-columns:1fr 1fr;gap:7px}.wa-chat{height:315px}.wa-bubble{font-size:12px}}
-@media(max-width:480px){.testimonial-grid{grid-template-columns:1fr;gap:12px}.wa-chat{height:290px}.wa-bubble{font-size:13px}}
+.wa-header{
+height:50px;
+background:#075e54;
+display:flex;
+align-items:center;
+padding:6px 8px;
+gap:7px;
+color:#fff
+}
+
+.wa-back{
+font-size:24px;
+font-weight:300;
+line-height:1
+}
+
+.wa-avatar{
+width:33px;
+height:33px;
+min-width:33px;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:#d7dfe2;
+font-size:18px;
+overflow:hidden
+}
+
+.wa-info{
+flex:1;
+min-width:0;
+line-height:1.15
+}
+
+.wa-name{
+font-size:12px;
+font-weight:600;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis
+}
+
+.wa-status{
+font-size:9px;
+color:#d0e7e3;
+margin-top:2px
+}
+
+.wa-icons{
+display:flex;
+gap:9px;
+font-size:14px;
+color:#e3f1ef;
+white-space:nowrap
+}
+
+.wa-chat{
+height:330px;
+padding:14px 10px;
+display:flex;
+flex-direction:column;
+gap:14px;
+background:#efeae2;
+overflow:hidden;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif
+}
+
+.wa-bubble{
+position:relative;
+max-width:94%;
+padding:10px 10px 8px;
+font-size:12px;
+line-height:1.45;
+color:#111;
+box-shadow:0 1px 1px #0002;
+word-wrap:break-word
+}
+
+.wa-in{
+align-self:flex-start;
+background:#fff;
+border-radius:0 8px 8px 8px
+}
+
+.wa-out{
+align-self:flex-end;
+background:#d9fdd3;
+border-radius:8px 0 8px 8px
+}
+
+.wa-bubble small{
+float:right;
+font-size:8px;
+line-height:11px;
+color:#86938d;
+margin:6px 0 0 9px;
+white-space:nowrap
+}
+
+.check{
+color:#1685d4;
+font-size:10px;
+font-weight:600
+}
+
+.activity{
+position:fixed;
+left:20px;
+bottom:20px;
+z-index:99;
+width:min(330px,calc(100% - 40px));
+background:#0d1b2a;
+border:1px solid #28515f;
+border-radius:13px;
+padding:12px 15px;
+box-shadow:0 12px 35px #00000055;
+display:none;
+animation:slideIn .45s ease
+}
+
+.activity strong{
+font-size:12px;
+color:#e4f3f6
+}
+
+.activity p{
+font-size:12px;
+color:#91a7b8;
+line-height:1.4;
+margin-top:2px
+}
+
+.activity small{
+display:block;
+color:#55d8cc;
+font-size:9px;
+margin-top:4px
+}
+
+.activity .close{
+position:absolute;
+right:10px;
+top:6px;
+color:#71899b;
+cursor:pointer
+}
+
+@keyframes slideIn{
+from{transform:translateY(25px);opacity:0}
+to{transform:translateY(0);opacity:1}
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#687d90;
+border-top:1px solid #182a3b;
+font-size:13px
+}
+
+@media(max-width:900px){
+.testimonial-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:700px){
+.grid-2,.capabilities{grid-template-columns:1fr}
+.hero{padding-top:65px}
+h1{letter-spacing:-2px}
+.section{padding-bottom:50px}
+.testimonial-grid{grid-template-columns:1fr 1fr;gap:7px}
+.wa-chat{height:315px}
+.wa-bubble{font-size:12px}
+}
+
+@media(max-width:480px){
+.testimonial-grid{grid-template-columns:1fr;gap:12px}
+.wa-chat{height:290px}
+.wa-bubble{font-size:13px}
+}
 </style>
 </head>
+
 <body>
 
 <header class="hero">
@@ -58,84 +457,247 @@ footer{text-align:center;padding:25px;color:#6f7b8f;border-top:1px solid #181e29
 </header>
 
 <main class="container">
+
 <section class="section">
 <h2 class="section-title">Dari Data Iklan Menjadi Action</h2>
+
 <div class="grid-2">
-<div class="card chaos"><h3>⚠️ The Chaos</h3><ul>
+
+<div class="card chaos">
+<h3>⚠️ The Chaos</h3>
+<ul>
 <li>⏱️ Analisis data iklan membutuhkan banyak waktu</li>
 <li>🔎 Sulit menemukan campaign yang performanya menurun</li>
 <li>📊 Laporan hasil kinerja iklan harus dibuat manual</li>
-</ul></div>
-<div class="card solution"><h3>✨ The Solution</h3><ul>
+</ul>
+</div>
+
+<div class="card solution">
+<h3>✨ The Solution</h3>
+<ul>
 <li>📥 Menarik data metrik iklan secara otomatis</li>
 <li>🧠 Menghitung KPI sesuai objektif iklan dan menganalisis anomali</li>
 <li>🎯 Memberikan kemungkinan penyebab dan rekomendasi action</li>
-</ul></div>
+</ul>
+</div>
+
 </div>
 </section>
 
 <section class="section">
 <h2 class="section-title">Core Capabilities</h2>
+
 <div class="capabilities">
-<div class="capability"><div class="icon">📊</div><h3>Automated KPI Analysis</h3><p>Menarik metrik iklan dan menghitung KPI sesuai objektif campaign secara otomatis.</p></div>
-<div class="capability"><div class="icon">🔍</div><h3>Anomaly Detection</h3><p>Mendeteksi perubahan dan anomali performa serta membantu mengidentifikasi kemungkinan penyebabnya.</p></div>
-<div class="capability"><div class="icon">🎯</div><h3>Action Recommendation</h3><p>Menyusun rekomendasi action berdasarkan hasil analisis dengan tetap melibatkan Human-in-the-Loop.</p></div>
+
+<div class="capability">
+<div class="icon">📊</div>
+<h3>Automated KPI Analysis</h3>
+<p>Menarik metrik iklan dan menghitung KPI sesuai objektif campaign secara otomatis.</p>
+</div>
+
+<div class="capability">
+<div class="icon">🔍</div>
+<h3>Anomaly Detection</h3>
+<p>Mendeteksi perubahan dan anomali performa serta membantu mengidentifikasi kemungkinan penyebabnya.</p>
+</div>
+
+<div class="capability">
+<div class="icon">🎯</div>
+<h3>Action Recommendation</h3>
+<p>Menyusun rekomendasi action berdasarkan hasil analisis dengan tetap melibatkan Human-in-the-Loop.</p>
+</div>
+
 </div>
 </section>
 
 <section class="section">
 <h2 class="section-title">Interactive Simulation</h2>
+
 <div class="sim">
-<div class="chat-head"><span class="dot"></span><strong>Kang DIGI</strong><small style="color:#78849a">AI Ads Performance Assistant</small></div>
-<div class="chat-body" id="chat"><div class="msg agent">Halo! Saya Kang DIGI. Pilih skenario untuk melihat bagaimana saya membantu menganalisis performa iklan.</div></div>
+
+<div class="chat-head">
+<span class="dot"></span>
+<strong>Kang DIGI</strong>
+<small style="color:#71899d">AI Ads Performance Assistant</small>
+</div>
+
+<div class="chat-body" id="chat">
+<div class="msg agent">
+Halo! Saya Kang DIGI. Pilih skenario untuk melihat bagaimana saya membantu menganalisis performa iklan.
+</div>
+</div>
+
 <div class="scenarios">
 <button onclick="simulate('Periksa campaign yang performanya menurun')">📉 Cek Campaign</button>
 <button onclick="simulate('Analisis anomali performa iklan')">🔍 Analisis Anomali</button>
 <button onclick="simulate('Apa action yang sebaiknya dilakukan?')">🎯 Rekomendasi Action</button>
 </div>
+
 </div>
 </section>
+
 </main>
 
 <section class="cta-wrap">
-<h2 style="font-size:30px;margin-bottom:10px">Ingin melihat Kang DIGI bekerja?</h2>
-<p style="color:#929daf;margin-bottom:25px">Jadwalkan demo dan lihat bagaimana analisis iklan dapat dibuat lebih otomatis.</p>
-<a class="cta" href="https://wa.me/6285185272829" target="_blank" onclick="showDemoNotice()">Minta Jadwal Demo</a>
+<h2 style="font-size:30px;margin-bottom:10px">
+Ingin melihat Kang DIGI bekerja?
+</h2>
+
+<p style="color:#8498aa;margin-bottom:25px">
+Jadwalkan demo dan lihat bagaimana analisis iklan dapat dibuat lebih otomatis.
+</p>
+
+<a class="cta"
+href="https://wa.me/6285185272829"
+target="_blank"
+onclick="showDemoNotice()">
+Minta Jadwal Demo
+</a>
 </section>
 
 <section class="testimonials container">
+
 <h2 class="section-title">Testimoni Klien</h2>
-<p class="testimonial-note">Ini kata beberapa Klien yang sudah merasakan manfaat otomatisasi dengan Kang DIGI.</p>
+
+<p class="testimonial-note">
+Ini kata beberapa Klien yang sudah merasakan manfaat otomatisasi dengan Kang DIGI.
+</p>
+
 <div class="testimonial-grid">
 
-<div class="wa-card"><div class="wa-header"><span class="wa-back">‹</span><div class="wa-avatar">👨🏻</div><div class="wa-info"><div class="wa-name">Andi - Toko Online</div><div class="wa-status">online</div></div><div class="wa-icons">◯ ⋮</div></div><div class="wa-chat">
-<div class="wa-bubble wa-in">Kang, laporannya keren banget! Sekarang saya bisa langsung tahu campaign mana yang perlu dioptimalkan. Jadi hemat waktu banget 🙏 <small>14.20</small></div>
-<div class="wa-bubble wa-out">Mantap! Senang bisa membantu ya Pak Andi. Ada yang ingin dianalisis lagi hari ini?<small>14.21 <span class="check">✓✓</span></small></div>
-<div class="wa-bubble wa-in">Untuk sekarang sudah cukup. Sistemnya sangat membantu. Saya mau lanjut pakai rutin karena hasilnya jelas terlihat 👍<small>14.23</small></div>
-</div></div>
+<div class="wa-card">
+<div class="wa-header">
+<span class="wa-back">‹</span>
+<div class="wa-avatar">👨🏻</div>
+<div class="wa-info">
+<div class="wa-name">Andi - Toko Online</div>
+<div class="wa-status">online</div>
+</div>
+<div class="wa-icons">◯ ⋮</div>
+</div>
 
-<div class="wa-card"><div class="wa-header"><span class="wa-back">‹</span><div class="wa-avatar">👩🏻</div><div class="wa-info"><div class="wa-name">Rina - Klinik Kecantikan</div><div class="wa-status">online</div></div><div class="wa-icons">◯ ⋮</div></div><div class="wa-chat">
-<div class="wa-bubble wa-in">Kang DIGI benar-benar ngebantu banget. Dulu saya harus rekap manual setiap hari, sekarang tinggal terima laporan lengkap di Telegram. Praktis dan akurat! 👍 <small>09.15</small></div>
-<div class="wa-bubble wa-out">Terima kasih Kak Rina 🙏. Jika ada pertanyaan atau perlu penyesuaian KPI, kabari saya ya.<small>09.16 <span class="check">✓✓</span></small></div>
-<div class="wa-bubble wa-in">Siap! Saya juga suka rekomendasi action-nya, jadi lebih mudah ambil keputusan.<small>09.18</small></div>
-</div></div>
+<div class="wa-chat">
 
-<div class="wa-card"><div class="wa-header"><span class="wa-back">‹</span><div class="wa-avatar">👨🏻</div><div class="wa-info"><div class="wa-name">Budi - Properti</div><div class="wa-status">online</div></div><div class="wa-icons">◯ ⋮</div></div><div class="wa-chat">
-<div class="wa-bubble wa-in">Hasil analisis anomali kemarin sangat membantu. Ternyata ada adset yang CPA-nya naik drastis. Setelah ikuti saran Kang DIGI, biaya iklan jadi lebih efisien.<small>11.03</small></div>
-<div class="wa-bubble wa-out">Wah bagus Pak Budi! Senang strateginya berhasil. Kita pantau terus ya. 🙏 <small>11.04 <span class="check">✓✓</span></small></div>
-<div class="wa-bubble wa-in">Siap. Tool ini wajib banget untuk tim marketing saya. Recommended! 👍<small>11.05</small></div>
-</div></div>
+<div class="wa-bubble wa-in">
+Kang, laporannya keren banget! Sekarang saya bisa langsung tahu campaign mana yang perlu dioptimalkan. Jadi hemat waktu banget 🙏
+<small>14.20</small>
+</div>
 
-<div class="wa-card"><div class="wa-header"><span class="wa-back">‹</span><div class="wa-avatar">👩🏻</div><div class="wa-info"><div class="wa-name">Sari - Fashion Brand</div><div class="wa-status">online</div></div><div class="wa-icons">◯ ⋮</div></div><div class="wa-chat">
-<div class="wa-bubble wa-in">Laporan harian dari Kang DIGI sangat mudah dipahami. Visualnya jelas, insight-nya relevan, dan rekomendasi action-nya langsung bisa diterapkan.✨ <small>16.10</small></div>
-<div class="wa-bubble wa-out">Terima kasih Kak Sari 🙏. Jika ada campaign baru yang mau dianalisis, kabari saya ya.<small>16.11 <span class="check">✓✓</span></small></div>
-<div class="wa-bubble wa-in">Pasti. Sejauh ini puas banget dengan hasilnya. Hemat waktu dan tim jadi lebih fokus ke strategi lainnya. 👍<small>16.13</small></div>
-</div></div>
+<div class="wa-bubble wa-out">
+Mantap! Senang bisa membantu ya Pak Andi. Ada yang ingin dianalisis lagi hari ini?
+<small>14.21 <span class="check">✓✓</span></small>
+</div>
+
+<div class="wa-bubble wa-in">
+Untuk sekarang sudah cukup. Sistemnya sangat membantu. Saya mau lanjut pakai rutin karena hasilnya jelas terlihat 👍
+<small>14.23</small>
+</div>
+
+</div>
+</div>
+
+<div class="wa-card">
+<div class="wa-header">
+<span class="wa-back">‹</span>
+<div class="wa-avatar">👩🏻</div>
+<div class="wa-info">
+<div class="wa-name">Rina - Klinik Kecantikan</div>
+<div class="wa-status">online</div>
+</div>
+<div class="wa-icons">◯ ⋮</div>
+</div>
+
+<div class="wa-chat">
+
+<div class="wa-bubble wa-in">
+Kang DIGI benar-benar ngebantu banget. Dulu saya harus rekap manual setiap hari, sekarang tinggal terima laporan lengkap di Telegram. Praktis dan akurat! 👍
+<small>09.15</small>
+</div>
+
+<div class="wa-bubble wa-out">
+Terima kasih Kak Rina 🙏. Jika ada pertanyaan atau perlu penyesuaian KPI, kabari saya ya.
+<small>09.16 <span class="check">✓✓</span></small>
+</div>
+
+<div class="wa-bubble wa-in">
+Siap! Saya juga suka rekomendasi action-nya, jadi lebih mudah ambil keputusan.
+<small>09.18</small>
+</div>
+
+</div>
+</div>
+
+<div class="wa-card">
+<div class="wa-header">
+<span class="wa-back">‹</span>
+<div class="wa-avatar">👨🏻</div>
+<div class="wa-info">
+<div class="wa-name">Budi - Properti</div>
+<div class="wa-status">online</div>
+</div>
+<div class="wa-icons">◯ ⋮</div>
+</div>
+
+<div class="wa-chat">
+
+<div class="wa-bubble wa-in">
+Hasil analisis anomali kemarin sangat membantu. Ternyata ada adset yang CPA-nya naik drastis. Setelah ikuti saran Kang DIGI, biaya iklan jadi lebih efisien.
+<small>11.03</small>
+</div>
+
+<div class="wa-bubble wa-out">
+Wah bagus Pak Budi! Senang strateginya berhasil. Kita pantau terus ya. 🙏
+<small>11.04 <span class="check">✓✓</span></small>
+</div>
+
+<div class="wa-bubble wa-in">
+Siap. Tool ini wajib banget untuk tim marketing saya. Recommended! 👍
+<small>11.05</small>
+</div>
+
+</div>
+</div>
+
+<div class="wa-card">
+<div class="wa-header">
+<span class="wa-back">‹</span>
+<div class="wa-avatar">👩🏻</div>
+<div class="wa-info">
+<div class="wa-name">Sari - Fashion Brand</div>
+<div class="wa-status">online</div>
+</div>
+<div class="wa-icons">◯ ⋮</div>
+</div>
+
+<div class="wa-chat">
+
+<div class="wa-bubble wa-in">
+Laporan harian dari Kang DIGI sangat mudah dipahami. Visualnya jelas, insight-nya relevan, dan rekomendasi action-nya langsung bisa diterapkan.✨
+<small>16.10</small>
+</div>
+
+<div class="wa-bubble wa-out">
+Terima kasih Kak Sari 🙏. Jika ada campaign baru yang mau dianalisis, kabari saya ya.
+<small>16.11 <span class="check">✓✓</span></small>
+</div>
+
+<div class="wa-bubble wa-in">
+Pasti. Sejauh ini puas banget dengan hasilnya. Hemat waktu dan tim jadi lebih fokus ke strategi lainnya. 👍
+<small>16.13</small>
+</div>
+
+</div>
+</div>
 
 </div>
 </section>
 
-<div class="activity" id="activity"><span class="close" onclick="hideActivity()">×</span><strong id="activityName"></strong><p id="activityText"></p><small>● Aktivitas terkini...</small></div>
+<div class="activity" id="activity">
+<span class="close" onclick="hideActivity()">×</span>
+<strong id="activityName"></strong>
+<p id="activityText"></p>
+<small>● Aktivitas terkini...</small>
+</div>
 
 <footer>Built with AI · AI Builder Bootcamp Showcase</footer>
 
@@ -145,12 +707,30 @@ const responses={
 "Analisis anomali performa iklan":"Saya akan memeriksa anomali pada metrik utama, mencari pola perubahan, lalu memberikan kemungkinan penyebab berdasarkan data yang tersedia.",
 "Apa action yang sebaiknya dilakukan?":"Berdasarkan hasil analisis, saya akan menyusun rekomendasi action. Keputusan eksekusi tetap membutuhkan persetujuan Human-in-the-Loop."
 };
+
 function simulate(text){
 const chat=document.getElementById("chat");
-chat.innerHTML=`<div class="msg user">${text}</div><div class="typing" id="typing">Kang DIGI sedang menganalisis<span>...</span></div>`;
-const typing=document.getElementById("typing");typing.style.display="block";
-setTimeout(()=>{typing.style.display="none";const msg=document.createElement("div");msg.className="msg agent";msg.textContent=responses[text];chat.appendChild(msg)},1100);
+
+chat.innerHTML=
+`<div class="msg user">${text}</div>
+<div class="typing" id="typing">
+Kang DIGI sedang menganalisis<span>...</span>
+</div>`;
+
+const typing=document.getElementById("typing");
+typing.style.display="block";
+
+setTimeout(()=>{
+typing.style.display="none";
+
+const msg=document.createElement("div");
+msg.className="msg agent";
+msg.textContent=responses[text];
+
+chat.appendChild(msg)
+},1100);
 }
+
 const activities=[
 ["Hendra dari Jakarta","baru saja meminta jadwal demo Rabu depan"],
 ["Maya dari Surabaya","baru saja meminta jadwal demo"],
@@ -158,11 +738,34 @@ const activities=[
 ["Putri dari Bali","baru saja meminta jadwal demo Senin depan"],
 ["Rizky dari Medan","baru saja meminta jadwal demo"]
 ];
-let activityIndex=0,activityBox=document.getElementById("activity");
-function showActivity(){const item=activities[activityIndex];document.getElementById("activityName").textContent=item[0];document.getElementById("activityText").textContent=item[1];activityBox.style.display="block";activityIndex=(activityIndex+1)%activities.length;setTimeout(hideActivity,5000)}
-function hideActivity(){activityBox.style.display="none"}
-function showDemoNotice(){setTimeout(showActivity,700)}
-setTimeout(showActivity,3500);setInterval(showActivity,12000);
+
+let activityIndex=0,
+activityBox=document.getElementById("activity");
+
+function showActivity(){
+const item=activities[activityIndex];
+
+document.getElementById("activityName").textContent=item[0];
+document.getElementById("activityText").textContent=item[1];
+
+activityBox.style.display="block";
+
+activityIndex=(activityIndex+1)%activities.length;
+
+setTimeout(hideActivity,5000)
+}
+
+function hideActivity(){
+activityBox.style.display="none"
+}
+
+function showDemoNotice(){
+setTimeout(showActivity,700)
+}
+
+setTimeout(showActivity,3500);
+setInterval(showActivity,12000);
 </script>
+
 </body>
 </html>
